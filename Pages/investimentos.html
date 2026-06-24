@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investimentos</title>
+</head>
+<body>
+    <header>
+        <h1>Fin User 🚀</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">🏠 Início</a></li>
+            <li><a href="./despesa.html">💳 Despesas</a></li>
+            <li><a href="./renda.html">💰 Renda</a></li>
+            <li><a href="./dividas.html">💸 Dívidas</a></li>
+            <li><a href="./metas.html">🎯 Metas</a></li>
+            <li><a href="./sobre.html">ℹ️ Sobre</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <h2>Meus Investimentos 📈</h2>
+            <p>Registre seus investimentos aqui.</p>
+            <form>
+                <div id="lista-investimento">
+                <label for="tipo-investimento">📊 Tipo de Investimento:</label>
+                <input type="text" id="tipo-investimento" placeholder="Ex: Ações, Títulos, etc.">
+
+                <label for="valor-investimento">💰 Valor:</label>
+                <input type="number" id="valor-investimento" placeholder="R$ 0,00">
+                </div>
+                <button type="button" id="btn-adicionar">+ adicionar investimento</button>
+
+                <button type="submit">Salvar</button>
+                
+            </form>
+            <div id="resultado"></div>
+        </div>
+    </main>
+</body>
+</html>
