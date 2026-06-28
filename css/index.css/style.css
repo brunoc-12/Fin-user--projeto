@@ -96,3 +96,40 @@ body{
     align-items:stretch;
     padding: 24px;
 }
+
+
+.secao-meio {
+    display: flex;
+    gap: 16px;
+    padding: 24px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--roxo);
+    color: var(--branco);
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+}
+.card-finbot button {
+    border: 2px solid var(--roxo);
+    background-color: var(--branco);
+    color: var(--roxo);
+    border-radius: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 13px;
+    margin: 4px;
+}
+
+.card-finbot button:hover {
+    background-color: var(--roxo);
+    color: var(--branco);
+}
+.secao-meio{
+    padding: o 24px 24px;
+}
