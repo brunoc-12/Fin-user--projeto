@@ -31,6 +31,7 @@ body{
 }
 .principal-container{
     grid-area:main;
+    padding: 24px;
 }
 .layout {
     display: grid;
@@ -209,7 +210,8 @@ form input{
     border: 1px solid #E5E7EB;
     border-radius: 8px;
     font-size:  14px;
-    font-family: 'poppins' sans-serif;
+    font-family: 'poppins', sans-serif;
+    max-width: 300;
 
 }
 form button{

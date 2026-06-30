@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Despesa</title>
+    <link rel="stylesheet" href="..//css/index.css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Fin User 🚀</h1>
+    <header class="cabecalho">
+        <img src="../images/ChatGPT Image 25 de jun. de 2026, 16_58_07.png" alt="Fin User">
+        <span>Fin User</span>
+        <div class="cabecalho-direito">
+        <div class="avatar">B</div>
+        <span class="nome-usuario">Olá, Bruno! 👋</span>
+    </div>
     </header>
-    <nav>
+    <div class="layout">
+    
+    <nav class="menu">
         <ul>
             <li><a href="../index.html">🏠 Início</a></li>
             <li><a href="./renda.html">💰 Renda</a></li>
@@ -20,11 +28,76 @@
 
         </ul>
     </nav>
-    <main>
-        <div class="container">
+    <main class="principal-container">
+        <div class="pagina-topo">
+            <div>
             <h2>Minhas Despesas 💳</h2>
             <p>Registre suas despesas aqui.</p>
-        
+            </div>
+            <button class="btn-novo">+ Nova despesa</button>
+        </div>
+        <div class="card-topo">
+            <section class="card">
+                <p>Total de Despesas (Mês)</p>
+                <h3>R$ 2.100,00</h3>
+                <p>Junho de 2026</p>
+            </section>
+            <section class="card">
+                <p>variação vc mês anterior</p>
+                <h3 style="color: green;">- 8%</h3>
+                <p style="color:green;">- R$ 180,00</p>
+            </section>
+            <section class="card">
+                <p>Média mensal (6meses)</p>
+                <h3>R$ 2.280,00</h3>
+            </section>
+        </div>
+        <section class="card">
+            <h3>📋 Últimas Despesas</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Categoria</th>
+                        <th>Data</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>🛒 Supermercado</td>
+                        <td>Alimentação</td>
+                        <td>14 Jun 2026</td>
+                        <td style="color: red;">- R$ 250,00</td>
+                    </tr>
+                    <tr>
+                        <td>⛽ Combustível</td>
+                        <td>Trasporte</td>
+                        <td>13 Jun 2026</td>
+                        <td style="color: red;">- R$ 120,00</td>
+                    </tr>
+                    <tr>
+                        <td>🏠 Aluguel</td>
+                        <td>Moradia</td>
+                        <td>10 Jun 2026</td>
+                        <td style="color: red;">- R$ 800,00</td>
+                    </tr>
+                    <tr>
+                        <td>📺 Netflix</td>
+                        <td>Assinatura</td>
+                        <td>07 Jun 2026</td>
+                        <td style="color: red;">- R$ 39,90</td>
+                    </tr>
+                    <tr>
+                        <td>🍽️ Restaurante</td>
+                        <td>Alimentação</td>
+                        <td>05 Jun 2026</td>
+                        <td style="color: red;">- R$ 80,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="card">
         <form >
         <label for="aluguel">🏠 Aluguel:</label>
         <input type="number" id="aluguel" placeholder="R$ 0,00">
@@ -51,10 +124,20 @@
         <input type="number" id="lazer" placeholder="R$ 0,00">
         <button type="submit">Salvar</button>
     </form>
+    </section
     <div id="resultado">
     </div>
+        
+        <section class="card dica ">
+        <span>💡</span>
+        <div>
+            <h3>Dica para reduzir suas despesas</h3>
+            <p>Revise seus gastos fixos e variáveis para encontrar oportunidades de economia.</p>
         </div>
+        </section>
 
     </main>
+    
+    </div>
 </body>
-</html>
+</html
