@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dividas</title>
+    <link rel="stylesheet" href="../css/index.css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Fin User 🚀</h1>
+    <header class="cabecalho">
+        <img src="../images/logo.png" alt="Fin User">
+        <span>Fin User</span>
+        <div class="cabecalho-direito">
+            <div class="avatar">B</div>
+            <span class="nome-usuario">Olá, Bruno! 👋</span>
+        </div>
     </header>
-    <nav>
+    <div class="layout">
+    <nav class="menu">
         <ul>
             <li><a href="../index.html">🏠 Início</a></li>
             <li><a href="./despesa.html">💳 Despesas</a></li>
@@ -17,12 +24,72 @@
             <li><a href="./investimentos.html">📊 Investimentos</a></li>
             <li><a href="./metas.html">🎯 Metas</a></li>
             <li><a href="./sobre.html">ℹ️ Sobre</a></li>
+            <li><a href="./score.html">📊 Score</a></li>
         </ul>
     </nav>
-    <main>
-    <div class="container">
+    <main class="principal-container">
+    <div class="pagina-topo">
         <h2>Minhas Dívidas 💰</h2>
-        <p>Ei, sem drama! Todo mundo passa por isso. Bora resolver juntos? 💪</p>
+        <p>Registre sua dívida e acompanhe seu progresso.</p>
+    </div>
+    <button class="btn-novo">+ Nova dívida</button>
+    
+    <div class="card-topo">
+        <section class="card">
+            <img src="../images/ditidas-total.png" alt="dívida" class="icone-card">
+            <p>Total de Dívidas</p>
+            <h3>R$ 18.650,00</h3>
+            <p>Junho de 2026</p>
+        </section>
+
+        <section class="card">
+            <img src="../images/variacao.png" alt="dívida" class="icone-card">
+            <p>Variação vs Mês Anterior</p>
+            <h3 style="color: red;">+ 6,2%</h3>
+            <p style="color: red;">+ 1.080,00</p>
+        </section>
+        <section class="card">
+            <img src="../images/media.png" alt="variacao" class="icone-card">
+            <p>Média mensal (6 meses)</p>
+            <h3>R$ 17.420,00</h3>
+        </section>
+    </div>
+    <table>
+        <thead>
+            <tr>
+            <th>Descrição</th>
+            <th>Categoria</th>
+            <th>Credor</th>
+            <th>Valor Total</th>
+            <th>Saldo Devedor</th>
+            <th>Vencimento</th>
+            <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>💳 cartão de crédito</td>
+                <td>🔴 cartão de crédito</td>
+                <td>Nubank</td>
+                <td>R$ 8.500,00</td>
+                <td>R$ 8.392,50</td>
+                <td>10 Jun 2026</td>
+                <td><span style="background-color: #FEE2E2; color: #DC2626; padding: 4px 12px; border-radius: 12px;">A vencer</span></td>
+
+            </tr>
+            <tr>
+                 <td>📋 Parcelamento IR</td>
+                <td>🔴 Imposto</td>
+                <td>Receita Federal</td>
+                <td>R$ 3.600,00, </td>
+                <td>R$ 1.392,50</td>
+                <td>12 Setembro 2026</td>
+                <td><span style="background-color: #FEE2E2; color: #DC2626; padding: 4px 12px; border-radius: 12px;">A vencer</span></td>
+
+            </tr>
+        </tbody>
+    </table>
+
 
     <form>
         <label for="divida1">💳 Dívida 1:</label>
@@ -38,6 +105,13 @@
     </form>
 <div id="resultado"></div>
 </div>
+<section class="card dica">
+    <span>💡</span>
+    <div>
+        <h3>Dica para gerenciar suas dívidas</h3>
+        <p>Estabeleça um plano de pagamento e priorize as dívidas com as maiores taxas de juros.</p>
+    </div>
+</section>
 
 </main>
 </body>

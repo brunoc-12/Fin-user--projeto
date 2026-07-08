@@ -179,6 +179,7 @@ td {
     border-radius: 40px;
     margin-bottom: 12px;
     object-fit: contain;
+    
 }
 
 .dica{
@@ -226,4 +227,33 @@ form button{
 }
 form button:hover{
     opacity: 0.9;
+}
+.barra-fundo{
+    height:8px;
+    backgound-color:#E5E7EB;
+    border-radius: 4px;
+    overflow:hidden;
+
+}
+.barra-preenchida{
+    height: 100%;
+    background-color: #E5E7EB;
+    border-radius: 4px;
+}
+.abas{
+    display:flex;
+    gap: 24px;
+    border-bottom:1px solid #E5E7EB;
+    margin-bottom: 16px;
+}
+.aba{
+    text-decoration:none;
+    color:var(--texto-claro);
+    padding: 12px 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+.aba-ativa{
+    color:var(--roxo);
+    border-bottom:2px solid var(--roxo);
 }
