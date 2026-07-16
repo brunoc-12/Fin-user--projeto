@@ -1,3 +1,4 @@
+javascript
 let saldoDashboard = 2000;
 
 let receitaDashboard = 5000;
@@ -38,4 +39,23 @@ if (metaAlcancada){
     document.querySelector("#mensagemMeta").textContent = "Parabéns! Você alcançou sua meta.";
 } else {
     document.querySelector("#mensagemMeta").textContent = "Ainda faltam R$ " + (valorMeta - valorAtual) + " para você chegar lá!";
+}
+
+let scoreFinanceiro = document.querySelector("#pontoScore");
+scoreFinanceiro.textcontent = saudeFinanceira + "/100";
+
+let pontoScore =document.querySelector("#pontoScore");
+pontoScore.textContent = saudeFinanceira + "/100";
+
+let progressScore = document.querySelector("#progressScore");
+progressScore.value = saudeFinanceira;
+
+let mensagemScore = document.querySelector("#mensagemScore");
+if (saudeFinanceira >= 80 ) {
+    mensagemScore.textContent = "Exelente! você está no caminho certo!";
+    
+}else if (saudeFinanceira >= 61 && saudeFinanceira <= 79){
+    mensagemScore.textContent = "Bom! Continue assim, mas ainda dá pra melhorar!";
+} else {
+    mensagemScore.textContent = "Atenção! Sua saúde financeira precisa de cuidado urgente.";
 }
