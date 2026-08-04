@@ -37,7 +37,7 @@ let tabelaRenda = [
  let ul = document.querySelector("#tabelaRenda")
  let htmlGerado = "";
  let i = 0;
- 
+let somaRenda = 0; 
 
 
  while (i< tabelaRenda.length) {
@@ -45,8 +45,12 @@ let tabelaRenda = [
      let cor = 'blue';
 
 
-      htmlGerado += "<tr> <td>" + atual.nome + "</td>" + "<td>" + atual.tipo + "</td>" + "<td>" + atual.data + "</td>" + "<td style='color:" + cor +  "'>R$ " + atual.valor + "</td>" + "</tr>";
+      htmlGerado += "<tr> <td>" + atual.nome + "</td>" + "<td>" + atual.tipo + "</td>" + "<td>" + atual.data + "</td>" + "<td style='color:" + cor +  "'>R$ " + atual.valor + "</td>" + "</tr>" ;
+      somaRenda += atual.valor;
+
 console.log(htmlGerado)
+
+
    
   
     
@@ -55,6 +59,7 @@ console.log(htmlGerado)
 
  }
 ul.innerHTML = htmlGerado;
+totalRendaMes.textContent = "R$ " + somaRenda;
 
 }
 atualizarTabelaRenda();
