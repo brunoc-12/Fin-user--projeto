@@ -1,4 +1,4 @@
-javascript
+
 let saldoDashboard = 2000;
 
 let receitaDashboard = 5000;
@@ -59,3 +59,55 @@ if (saudeFinanceira >= 80 ) {
 } else {
     mensagemScore.textContent = "Atenção! Sua saúde financeira precisa de cuidado urgente.";
 }
+
+let movimentacoes = [
+    {nome: "Restaurate", valor: 45, data: "14 Jun", tipo: "gasto"},
+    {nome: "Salário", valor: 5000, data: "01 Jul", tipo: "receita"},
+    {nome: "compra", valor: 120, data: "15 Jun", tipo: "gasto"},
+    {nome: "Uber", valor: 30, data: "16 Jun", tipo: "gasto"},
+    {nome: "Livro", valor: 50, data: "17 Jun", tipo: "gasto"},
+    {nome: "Steraming", valor: 20, data: "17 Jun", tipo:"gasto"}
+
+   
+];
+ console.log(movimentacoes);
+ let ul = document.querySelector("#movimentacoes")
+ let htmlGerado = "";
+ let i = 0;
+ 
+
+
+ while (i< movimentacoes.length) {
+     let atual = movimentacoes[i];
+   
+    let cor;
+
+    if (atual.tipo === "receita"){
+        cor = "green";
+    } else {
+        cor = "red";
+    }
+    console.log(cor);
+    
+
+    i++
+htmlGerado += "<li>" + atual.nome + "-" + atual.data + " <span style= 'color:" + cor + "'>" + "R$ "  + atual.valor + "</span>" + "</li>"; 
+
+console.log(htmlGerado)
+ }
+
+ ul.innerHTML =htmlGerado;
+
+ let metaOne = document.querySelector("#metaOne");
+ metaOne.textContent = minhaMeta;
+ console.log(metaOne);
+
+ let precoMeta = document.querySelector("#precoMeta");
+ precoMeta.textContent = 'R$ ' + valorAtual + ' de R$ ' + valorMeta;
+ console.log(precoMeta);
+
+ let progressoMeta = document.querySelector("#progressoMeta");
+ progressoMeta.value = porcentagem;
+ console.log(progressoMeta);
+ 
+ 
