@@ -37,21 +37,21 @@
         <div class="card-topo">
             <section class="card">
                 <img src="../images/icone roxo.png" alt="investimento" class="icone-card">
-                <p>Total Investido</p>
-                <h3>R$ 25.430,00</h3>
-                <p>JUnho de 2026</p>
+                <p id="totalInvestido">Total Investido</p>
+                <h3 id="valorTotalInvestido">R$ 25.430,00</h3>
+                <p id="dataTotalInvestido">JUnho de 2026</p>
             </section>
             <section class="card">
                 <img src="../images/new icon invest.png" alt="variacao" class="icone-card">
-                <p>Variação vs Mês Anterior</p>
+                <p id="variacaoMensal">Variação vs Mês Anterior</p>
                 <h3 style="color: green;">+ 8,5%</h3>
-                <p style="color: green;">+ 1.987,00</p>
+                <p style="color: green;" id="valorVariacaoMensal">+ 1.987,00</p>
             </section>
             <section class="card">
                 <img src="../images/media.png" alt="media" class="icone-card">
-                <p>Rendimento Mês</p>
-                <h3 style="color: blue;">R$ 1.987,00</h3>
-                <p>Junho de 2026</p>
+                <p id="rendimentoMensal">Rendimento Mês</p>
+                <h3 style="color: blue;" id="valorRendimentoMensal">R$ 1.987,00</h3>
+                <p id="dataRendimentoMensal">Junho de 2026</p>
             </section>
 
         </div>
@@ -66,55 +66,10 @@
                     <th>Saldo atual</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>🏛️ Tesouro Selic 2027</td>
-                    <td>🔵 Tesouro Direto</td>
-                    <td>R$ 10.000,00</td>
-                    <td style="color: green;">+ 5,2%</td>
-                    <td style="color: green;">R$ 520,00</td>
-                    <td>R$ 10.520,00</td>
-                </tr>
-                <tr>
-                    <td>Fundo Imobiliário KNSC11</td>
-                    <td>🔵 Fundo Imobiliário</td>
-                    <td>R$ 7.000,00</td>
-                    <td style="color: green;">+ 8,7%</td>
-                    <td style="color: green;">R$ 609,00</td>
-                    <td>R$ 7.609,00</td>
-                </tr>
-                <tr>
-                    <td>🟢Ações Petrobras PETR4</td>
-                    <td>Ações</td>
-                    <td>R$ 5.000,00</td>
-                    <td style="color: green;">+ 12,3%</td>
-                    <td style="color: green;">R$ 615,00</td>
-                    <td>R$ 5.615,00</td>
-                </tr>
-                <tr>
-                    <td>CDB Banco do Brasil</td>
-                    <td>🟠CDB/RDB</td>
-                    <td>R$ 3.430,00</td>
-                    <td style="color: green;">+ 6,1%</td>
-                    <td style="color: green;">R$ 243,00</td>
-                    <td>R$ 3.673,00</td>
-                </tr>
-                <tr>
-                    <td>Fundo Multimercado XP</td>
-                    <td>🟤Fundos Multimercado</td>
-                    <td>R$ 0,00</td>
-                    <td style="color: gray;">+ 0,0%</td>
-                    <td style="color: grey;">R$ 0,00</td>
-                    <td>R$ 0,00</td>
-                </tr>
-                <tr>
-                    <td>🟡Ouro Físico</td>
-                    <td>Commodities</td>
-                    <td>R$ 0,00</td>
-                    <td style="color: grey;">+ 0,0%</td>
-                    <td style="color: gray;">R$ 0,00</td>
-                    <td>R$ 0,00</td>
-                </tr>
+            <tbody id="tabelaInvestimento">
+              
+                
+                  
             </tbody>
         </table>
         <div class="barra-fundo">
@@ -123,19 +78,20 @@
 
             <form>
                 <div id="lista-investimento">
-                <label for="tipo-investimento">📊 Tipo de Investimento:</label>
-                <input type="text" id="tipo-investimento" placeholder="Ex: Ações, Títulos, etc.">
+                <label for="novoInvestimento">📊 Tipo de Investimento:</label>
+                <input type="text" id="novoInvestimento" placeholder="Ex: Ações, Títulos, etc.">
 
                 <label for="valor-investimento">💰 Valor:</label>
                 <input type="number" id="valor-investimento" placeholder="R$ 0,00">
                 </div>
                 <button type="button" id="btn-adicionar">+ adicionar investimento</button>
 
-                <button type="submit">Salvar</button>
+                <button type="submit" id="btn-salvar-investimento">Salvar</button>
                 
             </form>
             <div id="resultado">
         </div>
     </main>
+    <script src="../js/investimentos.js"></script>
 </body>
 </html>

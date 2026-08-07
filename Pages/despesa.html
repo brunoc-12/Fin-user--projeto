@@ -42,20 +42,20 @@
                <img src="../images/total renda.png" alt="total renda" class="icone-card">
                 
                 <p>Total de Despesas (Mês)</p>
-                <h3>R$ 2.100,00</h3>
-                <p>Junho de 2026</p>
+                <h3 id="totalDespesa">R$ 2.100,00</h3>
+                <p id="mesDespesa">Junho de 2026</p>
             </section>
             <section class="card">
                <img src="../images/variacao.png" alt="variacao" class="icone-card">
         
                 <p>variação vc mês anterior</p>
-                <h3 style="color: green;">- 8%</h3>
-                <p style="color:green;">- R$ 180,00</p>
+                <h3 style="color: green;" id="variaDespesa">- 8%</h3>
+                <p style="color:green;" id="gastoDespesa">- R$ 180,00</p>
             </section>
             <section class="card">
                 <img src="../images/media.png" alt="Média Mensal" class="icone-card">
                 <p>Média mensal (6meses)</p>
-                <h3>R$ 2.280,00</h3>
+                <h3 id="valorMediaDespesa">R$ 2.280,00</h3>
             </section>
         </div>
         <section class="card">
@@ -69,40 +69,15 @@
                         <th>Valor</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>🛒 Supermercado</td>
-                        <td>Alimentação</td>
-                        <td>14 Jun 2026</td>
-                        <td style="color: red;">- R$ 250,00</td>
-                    </tr>
-                    <tr>
-                        <td>⛽ Combustível</td>
-                        <td>Trasporte</td>
-                        <td>13 Jun 2026</td>
-                        <td style="color: red;">- R$ 120,00</td>
-                    </tr>
-                    <tr>
-                        <td>🏠 Aluguel</td>
-                        <td>Moradia</td>
-                        <td>10 Jun 2026</td>
-                        <td style="color: red;">- R$ 800,00</td>
-                    </tr>
-                    <tr>
-                        <td>📺 Netflix</td>
-                        <td>Assinatura</td>
-                        <td>07 Jun 2026</td>
-                        <td style="color: red;">- R$ 39,90</td>
-                    </tr>
-                    <tr>
-                        <td>🍽️ Restaurante</td>
-                        <td>Alimentação</td>
-                        <td>05 Jun 2026</td>
-                        <td style="color: red;">- R$ 80,00</td>
-                    </tr>
+                <tbody id="tabelaDespesa">
+            
+                      
+                       
                 </tbody>
             </table>
         </section>
+              
+             
         <section class="card">
         <form >
         <label for="aluguel">🏠 Aluguel:</label>
@@ -128,10 +103,10 @@
 
         <label for="lazer">🎮 Lazer:</label>
         <input type="number" id="lazer" placeholder="R$ 0,00">
-        <button type="submit">Salvar</button>
+        <button type="submit" id="btnSalvarDespesa">Salvar</button>
     </form>
-    </section
-    <div id="Resultado"></div>
+</section>
+    <div id="resultado">
         
     </div>
         
@@ -146,5 +121,6 @@
     </main>
     
     </div>
+    <script src="../js/despesa.js"></script>
 </body>
 </html>
