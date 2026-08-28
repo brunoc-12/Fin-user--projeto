@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renda</title>
+<link rel="stylesheet" href="../css/index.css/style.css">
+</head>
+<body>
+    
+    <header class="cabecalho">
+    <img src="../images/logo.png" alt="Fin User">
+    <span>Fin User</span>
+    <div class="cabecalho-direito">
+        <div class="avatar">B</div>
+        <span class="nome-usuario">Olá, Bruno! 👋</span>
+    </div>
+</header>
+        <div class="layout">
+        <nav class="menu">
+            
+            <ul>
+                <li><a href="../index.html">🏠 Início</a></li>
+                <li><a href="./renda.html">💰 Renda</a></li>
+                <li><a href="./despesa.html">💸 Despesas</a></li>
+                <li><a href="./investimentos.html">📊 Investimentos</a></li>
+                <li><a href="./dividas.html">💳 Dívidas</a></li>
+                <li><a href="./metas.html">🎯 Metas</a></li>
+                <li><a href="./sobre.html">ℹ️ Sobre</a></li>
+                <li><a href="./score.html">📊 Score</a></li>
+            </ul>
+            
+        </nav>
+        <main class="principal-container">
+                <div class="pagina-topo">
+                    <div>
+            <h2>Renda 💰</h2>
+            <p>Acompanhe todas as suas entradas e aumente seus ganhos.</p>
+                    </div>
+            <button class="btn-novo" id="novaRenda">+ Nova renda</button>
+                </div>
+        
+        <div class="card-topo">
+                    <section class="card">
+                        <img src="../images/total renda.png" alt="renda" class="icone-card">
+                    <p>Total de Renda (mês)</p>
+                    <h3 id="totalRendaMes"></h3>
+                    <p id="dateRenda">Junho de 2026</p>
+                    </section>
+                    <section class="card">
+                        <img src="../images/ChatGPT Image 30 de jun. de 2026, 09_29_39.png" alt="variacao" class="icone-card">
+                        <p>Variação vs Mês anterior</p>
+                        <h3 style="color: green;" id="variacaoRenda">+ 12</h3>
+                        <p style="color: green;" id="valorVariacao">R$ 540,00</p>
+                    </section>
+                    <section class="card">
+                        <img src="../images/ChatGPT Image 30 de jun. de 2026, 09_36_16.png" alt="media" class="icone-card">
+                    <p >Média mensal (6 mês) </p>
+                    <h3 id="valorMediaMensal">R$ 4.460,00</h3>
+                    </section>
+                    
+                    
+                     
+                </div>
+               <section class="card">
+                <h3>📋 Últimas Rendas</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Descrição</th>
+                            <th>Categoria </th>
+                            <th>Data</th>
+                            <th>Valor</th>
+
+                        </tr>
+                         </thead>
+                       
+                        <tbody id="tabelaRenda">
+                        
+
+                        
+                       
+                
+                </table>
+                     
+
+            </section>
+               <section class="card dica">
+                <span>💡</span>
+                <div>
+                    <h3>Dica para aumentar sua renda</h3>
+                    <p>Diversifique suas fontes de renda para ter mais estabilidade financeira.</p>
+                </div>
+               </section>
+            
+        
+            <section  class="card">
+                <h2>Minha Renda 💰</h2>
+                <p>E aí que bom te ter por aqui, tô vendo que pingou grana por aí, quanto caiu?</p>
+               <form action="">
+                   <label for="fonteRenda">Fonte da Renda:</label>
+                   <select name="fonteRenda" id="fonteRenda">
+                       <option value="clt">CLT</option>
+                       <option value="freela">Freela</option>
+                       <option value="estágio">Estágio</option>
+                    
+                   </select>
+                   <label for="valorRenda">Valor da Renda:</label>
+                   <input type="number" name="valor-renda" id="valorRenda" step="0.01">
+                   <button type="submit" id="btn-salvar" >Salvar</button>
+               </form>
+               <div id="resultado"></div>
+            </section>
+            </main>
+            </div>
+ <script src="../js/renda.js"></script>
+</body>
+            
+        
+    
+    

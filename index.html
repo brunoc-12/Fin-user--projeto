@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>FinUser.com.br</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/index.css/style.css">
+
+</head>
+<body>
+  
+    
+<header class="cabecalho">
+    <img src="./images/logo.png" alt="Fin User ">
+    <span>Fin User</span>
+    <div class="cabecalho-direito">
+      🔔
+      📅 Junho de 2024 ▾
+    </div>
+    <div class="avatar">B</div>
+    <span>Olá, Bruno! 👋</span>
+</header>
+<div class="layout">
+
+<nav class="menu">
+
+  <ul>
+    <li><a href="./index.html">🏠 Início</a></li>
+    <li><a href="./Pages/renda.html">💰 Renda</a></li>
+    <li><a href="./Pages/despesa.html">💸 Despesas</a></li>
+    <li><a href="./Pages/dividas.html">💳 Dívidas</a></li>
+    <li><a href="./Pages/investimentos.html">📈 Investimentos</a></li>
+    <li><a href="./Pages/metas.html">🎯 Metas</a></li>
+    <li><a href="./Pages/sobre.html">ℹ️ Sobre</a></li>
+  </ul>
+  
+</nav>  
+
+<main class="principal-container ">
+  <div >
+    <div class="card-topo">
+  <section class="card card-saldo">
+    <h2>💰 Saldo</h2>
+    <p id="valorSaldo">R$ 2.000</p>
+  </section>
+  <section class="card">
+    <h2>📥 Receita</h2>
+    <p id="valorReceita">R$ 5.000</p>
+    <span style="color: green;">↑ 12%</span>
+  </section>
+  <section class="card">
+    <h2>🛒 Gasto</h2>
+    <p id="valorGastos">R$ 2.100</p>
+     <span style="color: red;">↓ 8%</span>
+  </section>
+  
+  <section >
+    <section class="card">
+      <h2>📈 Investimentos</h2>
+      <p id="valorInvestimentos">R$ 550</p>
+      <span style="color: green;">↑ 15%</span>
+    </section>
+    </div>
+    <div class="secao-meio">
+    <section class="card-finbot">
+     <h2>🤖 FinBot</h2>
+    <p>😊Como posso te ajudar hoje?</p>
+    <button>Como economizar no próximo mês?</button>
+    <button>Como está a minha saúde financeira?</button>
+    </section>
+    <section class="card" id="scoreFinanceiro">
+      <h3>📊 Saúde financeira </h3>
+      <p id="pontoScore">78/100</p>
+      <progress value="78" max="100" id="progressScore"></progress>
+      <p id="mensagemScore"></p>
+    </section>
+    
+     <section class="card" >
+    <h3>🎯 Minha Meta</h3>
+    <p id="metaOne">MacBook Air M2 💻</p>
+    <p id="precoMeta">R$ 2.500 de R$ 5.000</p>
+    <progress value="50" max="100" id="progressoMeta"></progress>
+    <p id="mensagemMeta"></p>
+  </section>
+ 
+    </div>
+  </section>
+  </div>
+  <div class="secao-movimentacao">
+     <section class="card">
+      <h3>🕐 Últimas Movimentações</h3>
+    <ul id="movimentacoes">
+      
+    </ul>
+  </section>
+     
+
+    
+  </div>
+ 
+</main>
+</div>
+ <script src="./js/index.js"></script>
+</body>
+</html>

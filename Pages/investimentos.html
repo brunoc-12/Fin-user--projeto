@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investimentos</title>
+    <link rel="stylesheet" href="../css/index.css/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <img src="../images/logo.png" alt="Fin User">
+        <span>Fin User</span>
+        <div class="cabecalho-direito">
+            <div class="avatar">B</div>
+            <span class="nome-usuario">Olá, Bruno! 👋</span>
+        </div>
+    </header>
+    <div class="layout">
+    <nav class="menu">
+        <ul>
+            <li><a href="../index.html">🏠 Início</a></li>
+            <li><a href="./despesa.html">💳 Despesas</a></li>
+            <li><a href="./renda.html">💰 Renda</a></li>
+            <li><a href="./dividas.html">💸 Dívidas</a></li>
+            <li><a href="./metas.html">🎯 Metas</a></li>
+            <li><a href="./sobre.html">ℹ️ Sobre</a></li>
+            <li><a href="./score.html">📊 Score</a></li>
+        </ul>
+    </nav>
+    <main class="principal-container ">
+        <div class="pagina-topo">
+        
+            <h2>Investimentos 📈</h2>
+            <p>Registre seus investimentos aqui.</p>
+        </div>
+        <button class="btn-novo">+ Novo investimento</button>
+        <div class="card-topo">
+            <section class="card">
+                <img src="../images/icone roxo.png" alt="investimento" class="icone-card">
+                <p id="totalInvestido">Total Investido</p>
+                <h3 id="valorTotalInvestido">R$ 25.430,00</h3>
+                <p id="dataTotalInvestido">JUnho de 2026</p>
+            </section>
+            <section class="card">
+                <img src="../images/new icon invest.png" alt="variacao" class="icone-card">
+                <p id="variacaoMensal">Variação vs Mês Anterior</p>
+                <h3 style="color: green;">+ 8,5%</h3>
+                <p style="color: green;" id="valorVariacaoMensal">+ 1.987,00</p>
+            </section>
+            <section class="card">
+                <img src="../images/media.png" alt="media" class="icone-card">
+                <p id="rendimentoMensal">Rendimento Mês</p>
+                <h3 style="color: blue;" id="valorRendimentoMensal">R$ 1.987,00</h3>
+                <p id="dataRendimentoMensal">Junho de 2026</p>
+            </section>
+
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ativo</th>
+                    <th>Categoria</th>
+                    <th>Valor investido</th>
+                    <th>Variação</th>
+                    <th>Rendimentos</th>
+                    <th>Saldo atual</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaInvestimento">
+              
+                
+                  
+            </tbody>
+        </table>
+        <div class="barra-fundo">
+            <div class="barra-preenchida" style="width: 40%;"></div>
+        </div>
+
+            <form>
+                <div id="lista-investimento">
+                <label for="novoInvestimento">📊 Tipo de Investimento:</label>
+                <input type="text" id="novoInvestimento" placeholder="Ex: Ações, Títulos, etc.">
+
+                <label for="valor-investimento">💰 Valor:</label>
+                <input type="number" id="valor-investimento" placeholder="R$ 0,00">
+                </div>
+                <button type="button" id="btn-adicionar">+ adicionar investimento</button>
+
+                <button type="submit" id="btn-salvar-investimento">Salvar</button>
+                
+            </form>
+            <div id="resultado">
+        </div>
+    </main>
+    <script src="../js/investimentos.js"></script>
+</body>
+</html>

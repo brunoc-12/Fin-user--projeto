@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despesa</title>
+    <link rel="stylesheet" href="../css/index.css/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <img src="../images/logo.png" alt="Fin User">
+        <span>Fin User</span>
+        <div class="cabecalho-direito">
+        <div class="avatar">B</div>
+        <span class="nome-usuario">Olá, Bruno! 👋</span>
+    </div>
+    </header>
+    <div class="layout">
+    
+    <nav class="menu">
+        <ul>
+            <li><a href="../index.html">🏠 Início</a></li>
+            <li><a href="./renda.html">💰 Renda</a></li>
+            <li><a href="./investimentos.html">📊 Investimentos</a></li>
+            <li><a href="./dividas.html">💸 Dívidas</a></li>
+            <li><a href="./metas.html">🎯 Metas</a></li>
+            <li><a href="./sobre.html">ℹ️ Sobre</a></li>
+            <li><a href="./score.html">📊 Score</a></li>
+
+        </ul>
+    </nav>
+    <main class="principal-container">
+        <div class="pagina-topo">
+            <div>
+            <h2>Minhas Despesas 💳</h2>
+            <p>Registre suas despesas aqui.</p>
+            </div>
+            <button class="btn-novo">+ Nova despesa</button>
+        </div>
+        <div class="card-topo">
+            <section class="card">
+               <img src="../images/total renda.png" alt="total renda" class="icone-card">
+                
+                <p>Total de Despesas (Mês)</p>
+                <h3 id="totalDespesa">R$ 2.100,00</h3>
+                <p id="mesDespesa">Junho de 2026</p>
+            </section>
+            <section class="card">
+               <img src="../images/variacao.png" alt="variacao" class="icone-card">
+        
+                <p>variação vc mês anterior</p>
+                <h3 style="color: green;" id="variaDespesa">- 8%</h3>
+                <p style="color:green;" id="gastoDespesa">- R$ 180,00</p>
+            </section>
+            <section class="card">
+                <img src="../images/media.png" alt="Média Mensal" class="icone-card">
+                <p>Média mensal (6meses)</p>
+                <h3 id="valorMediaDespesa">R$ 2.280,00</h3>
+            </section>
+        </div>
+        <section class="card">
+            <h3>📋 Últimas Despesas</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Categoria</th>
+                        <th>Data</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaDespesa">
+            
+                      
+                       
+                </tbody>
+            </table>
+        </section>
+              
+             
+        <section class="card">
+        <form >
+        <label for="aluguel">🏠 Aluguel:</label>
+        <input type="number" id="aluguel" placeholder="R$ 0,00">
+
+        <label for="internet">📶 Internet:</label>
+        <input type="number" id="internet" placeholder="R$ 0,00">
+
+        <label for="luz-energia">💡 Luz/Energia:</label>
+        <input type="number" id="luz-energia" placeholder="R$ 0,00">
+
+        <label for="agua">🚰 Água:</label>
+        <input type="number" id="agua" placeholder="R$ 0,00">
+
+        <label for="alimentacao">🍽️ Alimentação:</label>
+        <input type="number" id="alimentacao" placeholder="R$ 0,00">
+
+        <label for="transporte">🚌 Transporte:</label>
+        <input type="number" id="transporte" placeholder="R$ 0,00">
+
+        <label for="mercado">🛒 Mercado:</label>
+        <input type="number" id="mercado" placeholder="R$ 0,00">
+
+        <label for="lazer">🎮 Lazer:</label>
+        <input type="number" id="lazer" placeholder="R$ 0,00">
+        <button type="submit" id="btnSalvarDespesa">Salvar</button>
+    </form>
+</section>
+    <div id="resultado">
+        
+    </div>
+        
+        <section class="card dica ">
+        <span>💡</span>
+        <div>
+            <h3>Dica para reduzir suas despesas</h3>
+            <p>Revise seus gastos fixos e variáveis para encontrar oportunidades de economia.</p>
+        </div>
+        </section>
+
+    </main>
+    
+    </div>
+    <script src="../js/despesa.js"></script>
+</body>
+</html>
