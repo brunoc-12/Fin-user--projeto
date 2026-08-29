@@ -20,26 +20,38 @@ A ideia é simples: te ajudar a entender para onde seu dinheiro vai, sem complic
 
 ## 🛠️ Tecnologias utilizadas
 
+**Frontend**
 - HTML5
-- CSS3 *(em desenvolvimento)*
-- JavaScript *(em desenvolvimento)*
+- CSS3
+- JavaScript (manipulação de DOM, arrays de objetos, formulários dinâmicos)
+
+**Backend**
+- Java (POO aplicada: herança, interfaces, encapsulamento, polimorfismo)
+
+## 🏗️ Estrutura do projeto
+
 
 ## 📚 O que aprendi
 
-Este projeto nasceu como um trabalho da faculdade, mas se tornou algo muito maior — uma forma de aplicar na prática tudo que estou aprendendo sobre desenvolvimento web.
+Este projeto nasceu como um trabalho da faculdade, mas se tornou algo muito maior — uma forma de aplicar na prática tudo que estou aprendendo sobre desenvolvimento web e orientação a objetos.
 
-Durante a construção aprendi:
-
+**No frontend:**
 - Estrutura semântica do HTML (`header`, `nav`, `main`, `section`)
-- Organização de projetos em pastas
-- Criação de formulários com `input`, `label`, `select` e `button`
-- Navegação entre páginas com links
+- Manipulação do DOM com JavaScript (querySelector, arrays de objetos, renderização dinâmica)
+- Criação de formulários funcionais com validação
 - Versionamento de código com Git e GitHub
+
+**No backend (Java):**
+- Modelagem de classes do domínio (`Usuario`, `Renda`, `Despesa`, `Investimento`)
+- Herança, com `Transacao` como classe abstrata compartilhando comportamento entre `Renda`, `Despesa` e `Investimento`
+- Interfaces, com `Notificavel` definindo um contrato de notificação implementado pelas classes de transação
+- Encapsulamento, com atributos privados e construtores
+- Polimorfismo, com métodos sobrescritos (`@Override`) para comportamento específico de cada classe
 
 ## 🚀 Próximos passos
 
-- [ ] Estilização com CSS
-- [ ] Funcionalidades com JavaScript
+- [ ] Criar uma API REST (Java/Spring Boot) para conectar o backend ao frontend
+- [ ] Persistência de dados com banco de dados (PostgreSQL)
 - [ ] Score financeiro automático
 - [ ] FinBot com respostas dinâmicas
 
