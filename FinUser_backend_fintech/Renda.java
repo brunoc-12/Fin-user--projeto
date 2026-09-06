@@ -14,21 +14,43 @@ public class Renda extends Transacao implements  notificacao{
         this.dataRenda = dataRenda;
         this.categoriaRenda = categoriaRenda;
     }
-    public void saldoRenda (){
-        System.out.println("Esse é o seu valor de Renda: " + saldoRenda);
+    public double getSaldoRenda(){
+        return saldoRenda;
     }
 
-    public void nomeRenda (){
-        System.out.println("Nome De Renda : " +nomeRenda);
+    public String getNomeRenda(){
+        return nomeRenda;
     }
 
-    public void descricaoRenda (){
-        System.out.println("Descrição de Renda: " +descricaoRenda);
+    public String getDescricaoRenda (){
+        return descricaoRenda;
     }
 
-    public void categoriaRenda () {System.out.println("Categoria da Renda: " + saldoRenda);}
+    public String getDataRenda() {return dataRenda;}
 
-    public void DataRenda  () {System.out.println("Data da renda adicionada': " + saldoRenda);}
+    public String getCategoriaRenda() {return categoriaRenda;}
+
+    public void setSaldoRenda(double saldoRenda) {
+        this.saldoRenda = saldoRenda;
+    }
+
+    public void setNomeRenda(String nomeRenda) {
+        this.nomeRenda = nomeRenda;
+    }
+
+    public void setDescricaoRenda(String descricaoRenda) {
+        this.descricaoRenda = descricaoRenda;
+    }
+
+    public void setDataRenda(String dataRenda) {
+        this.dataRenda = dataRenda;
+    }
+
+    ´
+
+    public void setCategoriaRenda(String categoriaRenda) {
+        this.categoriaRenda = categoriaRenda;
+    }
 
     public void exibirInformacoes(){
         System.out.println("Saldo da Renda: " + saldoRenda + "\n" +

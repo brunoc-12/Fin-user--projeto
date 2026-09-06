@@ -19,25 +19,41 @@ public class Investimento extends Transacao implements notificacao{
 
     }
 
-
-    public void valorInvestido (){
-        System.out.println("Esse é o seu valor investido: " + valorInvestido);
+    public double getValorInvestido(){
+        return valorInvestido;
     }
 
-    public void nomeInvestimento (){
-        System.out.println("Seu investimento é: " +nomeInvestimento);
+    public String getNomeInvestimento(){
+        return nomeInvestimento;
     }
 
-    public void descricaoInvestimento (){
-        System.out.println("Sobre seu investimento: " +descricaoInvestimento);
-    }
-    public void dataInvestimento (){
-        System.out.println("A data do investimento foi:" );
-
+    public String getDescricaoInvestimento (){
+        return descricaoInvestimento;
     }
 
-    public void CategoriaInvestimento(){
-        System.out.println("seu Investimento pertence a: ");
+    public String getDataInvestimento() {return dataInvestimento;}
+
+    public String getCategoriaInvestimento() {return categoriaInvestimento;}
+
+    public void setValorInvestido(double valorInvestido) {
+        this.valorInvestido = valorInvestido;
+    }
+
+
+    public void setCategoriaInvestimento(String categoriaInvestimento) {
+        this.categoriaInvestimento = categoriaInvestimento;
+    }
+
+    public void setNomeInvestimento(String nomeInvestimento) {
+        this.nomeInvestimento = nomeInvestimento;
+    }
+
+    public void setDescricaoInvestimento(String descricaoInvestimento) {
+        this.descricaoInvestimento = descricaoInvestimento;
+    }
+
+    public void setDataInvestimento(String dataInvestimento) {
+        this.dataInvestimento = dataInvestimento;
     }
 
     public void exibirInformacoes(){
