@@ -15,13 +15,22 @@ import java.util.Optional;
 @Service
 public class RendaService {
 
+    @Autowired private RendaRepository rendaRepository;
+
 
     @Autowired
-    private RendaRepository rendaRepository;
+    private UsuarioRepository usuarioRepository; // Não esqueça de injetar este repositório no topo da classe!
 
     public Renda salvar(Renda renda) {
-        return rendaRepository.save(renda);
+        // 1. Busca o usuário no banco usando o ID que veio do JSON do Insomnia
+        Usuario usuario = usuarioRepository.findById(renda.getUsuarioId())
+                .orElseThrow(() -> new RuntimeException("Usuário não encontrado!"));
 
+        // 2. Associa o objeto usuário completo na renda
+        renda.setUsuario(usuario);
+
+        // 3. Salva a renda no banco de dados
+        return rendaRepository.save(renda);
     }
 
     public Renda buscarPorId(Long id) {
@@ -55,12 +64,47 @@ public class RendaService {
             Renda rendaExistente = rendaAtual.get();
             rendaExistente.setValor(renda.getValor());
             rendaExistente.setDescricao(renda.getDescricao());
-            rendaExistente.setDataRecebimento(renda.getDataRecebimento());
+            rendaExistente.setDataRenda(renda.getDataRenda());
+
+            // Busca e atualiza o usuário caso venha o ID no JSON
+            if (renda.getUsuarioId() != null) {
+                Usuario usuario = usuarioRepository.findById(renda.getUsuarioId())
+                        .orElseThrow(() -> new RuntimeException("Usuário não encontrado!"));
+                rendaExistente.setUsuario(usuario);
+            }
+
             return rendaRepository.save(rendaExistente);
         } else {
-            throw new RuntimeException("Renda não encontrado!");
+            throw new RuntimeException("Renda não encontrada!");
         }
+    }
 
+    public Renda atualizarParcial(Long id, Renda renda) {
+        Optional<Renda> rendaAtual = rendaRepository.findById(id);
+
+        if (rendaAtual.isPresent()) {
+            Renda rendaExistente = rendaAtual.get();
+
+            // Atualiza apenas os campos que foram enviados (não nulos)
+            if (renda.getDescricao() != null) {
+                rendaExistente.setDescricao(renda.getDescricao());
+            }
+            if (renda.getValor() != null) {
+                rendaExistente.setValor(renda.getValor());
+            }
+            if (renda.getDataRenda() != null) {
+                rendaExistente.setDataRenda(renda.getDataRenda());
+            }
+            if (renda.getUsuarioId() != null) {
+                Usuario usuario = usuarioRepository.findById(renda.getUsuarioId())
+                        .orElseThrow(() -> new RuntimeException("Usuário não encontrado!"));
+                rendaExistente.setUsuario(usuario);
+            }
+
+            return rendaRepository.save(rendaExistente);
+        } else {
+            throw new RuntimeException("Renda não encontrada!");
+        }
     }
 }
 

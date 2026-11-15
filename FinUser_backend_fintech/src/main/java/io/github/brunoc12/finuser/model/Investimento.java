@@ -4,7 +4,9 @@ package io.github.brunoc12.finuser.model;
 import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+
 @Entity
+@Table(name = "tbl_investimento")
 public class Investimento {
 
     @Id
@@ -32,7 +34,30 @@ public class Investimento {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private objetivoFinanceiro objetivoFinanceiro;
+    private ObjetivoFinanceiro objetivoFinanceiro;
+
+    @ManyToOne
+    @JoinColumn(name = "usuario_id", nullable = false)
+    private Usuario usuario;
+
+    @Transient
+    private Long usuarioId;
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Long getUsuarioId() {
+        return usuarioId;
+    }
+
+    public void setUsuarioId(Long usuarioId) {
+        this.usuarioId = usuarioId;
+    }
 
     public LocalDate getDataInvestimento() {
         return dataInvestimento;
@@ -66,14 +91,13 @@ public class Investimento {
         this.investCategoria = investCategoria;
     }
 
-    public objetivoFinanceiro getObjetivoFinanceiro() {
+    public ObjetivoFinanceiro getObjetivoFinanceiro() {
         return objetivoFinanceiro;
     }
 
-    public void setObjetivoFinanceiro(objetivoFinanceiro objetivoFinanceiro) {
+    public void setObjetivoFinanceiro(ObjetivoFinanceiro objetivoFinanceiro) {
         this.objetivoFinanceiro = objetivoFinanceiro;
     }
-
     public BigDecimal getValor() {
         return valor;
     }

@@ -19,8 +19,32 @@ public class Renda {
     @Column(nullable = false, precision = 15, scale = 2)
     private BigDecimal valor;
 
-    @Column(name = "data_recebimento", nullable = false)
-    private LocalDate dataRecebimento;
+    @Column(name = "DATA_RENDA", nullable = false)
+    private LocalDate dataRenda;
+
+
+    @ManyToOne
+    @JoinColumn(name = "usuario_id", nullable = false)
+    private Usuario usuario;
+
+    public Long getUsuarioId() {
+        return usuarioId;
+    }
+
+    public void setUsuarioId(Long usuarioId) {
+        this.usuarioId = usuarioId;
+    }
+
+    @Transient
+    private Long usuarioId;
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 
     public Long getId() {
         return id;
@@ -46,11 +70,11 @@ public class Renda {
         this.valor = valor;
     }
 
-    public LocalDate getDataRecebimento() {
-        return dataRecebimento;
+    public LocalDate getDataRenda() {
+        return dataRenda;
     }
 
-    public void setDataRecebimento(LocalDate dataRecebimento) {
-        this.dataRecebimento = dataRecebimento;
+    public void setDataRenda(LocalDate dataRecebimento) {
+        this.dataRenda = dataRecebimento;
     }
 }

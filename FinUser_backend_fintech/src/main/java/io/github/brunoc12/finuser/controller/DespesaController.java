@@ -2,12 +2,7 @@ package io.github.brunoc12.finuser.controller;
 
 
 import io.github.brunoc12.finuser.model.Despesa;
-import io.github.brunoc12.finuser.model.Renda;
-import io.github.brunoc12.finuser.model.Usuario;
-import io.github.brunoc12.finuser.repository.DespesaRepository;
 import io.github.brunoc12.finuser.service.DespesaService;
-import io.github.brunoc12.finuser.service.RendaService;
-import io.github.brunoc12.finuser.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

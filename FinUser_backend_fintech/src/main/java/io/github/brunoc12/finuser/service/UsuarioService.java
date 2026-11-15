@@ -53,10 +53,16 @@ public class UsuarioService {
             Usuario usuarioExistente = usuarioAtual.get();
             usuarioExistente.setNome(usuario.getNome());
             usuarioExistente.setEmail(usuario.getEmail());
+            usuarioExistente.setSenha(usuario.getSenha());
             return usuarioRepository.save(usuarioExistente);
         } else {
             throw new RuntimeException("Usuário não encontrado!");
         }
+    }
+
+    public Optional<Usuario> login(String email, String senha) {
+        return usuarioRepository.findByEmail(email)
+                .filter(usuario -> usuario.getSenha().equals(senha));
     }
 }
 

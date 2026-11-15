@@ -3,11 +3,7 @@ package io.github.brunoc12.finuser.service;
 
 
 import io.github.brunoc12.finuser.model.Despesa;
-import io.github.brunoc12.finuser.model.Renda;
-import io.github.brunoc12.finuser.model.Usuario;
 import io.github.brunoc12.finuser.repository.DespesaRepository;
-import io.github.brunoc12.finuser.repository.RendaRepository;
-import io.github.brunoc12.finuser.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -59,10 +55,12 @@ public class DespesaService {
             despesaExistente.setValor(despesa.getValor());
             despesaExistente.setDescricao(despesa.getDescricao());
             despesaExistente.setDataPagamento(despesa.getDataPagamento());
+            despesaExistente.setCategoria(despesa.getCategoria());
             return despesaRepository.save(despesaExistente);
         } else {
             throw new RuntimeException("Despesa não encontrado!");
         }
+    }
 
     }
-}
+
